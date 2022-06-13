@@ -3,7 +3,7 @@ import { Nav, Navbar, Button, Form } from "react-bootstrap";
 export function App(){
     return (
         <div className="App">
-            <div className="bg-dark mb-3 pb-14">
+            <div className="bg-dark" >
                 <Navbar variant="dark" sticky="top" expand="sm" collapseOnSelect>
                     <Navbar.Brand>
                       <img src="" width="40px" height="40px" alt="" />
@@ -20,7 +20,7 @@ export function App(){
                 </Navbar>
                 <div className="container">
                     <Form>
-                        <Form.Group className="mb-3 mt-3">
+                        <Form.Group>
                             <Form.Control type="text" placeholder="Search for jobs.." />
                         </Form.Group>
                     </Form>
