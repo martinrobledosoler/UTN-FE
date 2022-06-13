@@ -1,4 +1,13 @@
 import { Nav, Navbar, Button, Form } from "react-bootstrap";
+import { Home } from './home';
+import { Profile } from './profile';
+import { Stadistics } from './stadistics';
+
+function render(element) {
+    let content = document.getElementById('content');
+
+    alert(element);
+}
 
 export function App(){
     return (
@@ -6,19 +15,18 @@ export function App(){
             <div className="bg-dark" style={{paddingBottom : "3%"}}>
                 <Navbar variant="dark" sticky="top" expand="sm" collapseOnSelect className="d-flex justify-content-between align-items-center">
                     <Navbar.Brand>
-                      <img src="/hw-logo.svg" width="60px" height="60px" alt="from devs to devs" />
+                      <img src="/hw-logo.svg" width="60px" height="60px" alt="from devs to devs" className="mx-3"/>
                     </Navbar.Brand>
-                    <Navbar.Toggle className="coloring" />
+                    <Navbar.Toggle className="coloring mx-3" />
                     <Navbar.Collapse>
                         <Nav>
-                            <Nav.Link href="/home">Home</Nav.Link>
-                            <Nav.Link href="/profile">Profile</Nav.Link>
-                            <Nav.Link href="/stadistics">Stadistics</Nav.Link>
+                            <Nav.Link onClick={() => render("home")}>Home</Nav.Link>
+                            <Nav.Link onClick={() => render("profile")}>Profile</Nav.Link>
+                            <Nav.Link onClick={() => render("stadistics")}>Stadistics</Nav.Link>
                         </Nav>
-                        <Button variant="outline-success" href="/Login">
+                        <Button variant="outline-success" href="/Login" className="ms-auto mx-3">
                             Login
                         </Button>
-                        
                     </Navbar.Collapse>
                 </Navbar>
                 <div className="container" style={{marginTop : "2%"}}>
@@ -28,13 +36,12 @@ export function App(){
                 </div>
             </div>
           
-            <div className="container">
-              aqui se renderiza el contenido
+            <div className="container" id="content">
+              <Home />
             </div>
 
-            <footer>
+            <footer className="bg-dark" style={{position : 'absolute', bottom : '0', width: '100%', height: '20%'}}>
                 <section className="container">
-                    <h1>Soy el footer</h1>
                 </section>
              </footer>
         </div>

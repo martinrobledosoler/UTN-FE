@@ -1,4 +1,22 @@
 import { Nav } from "react-bootstrap";
+const axios = require('axios').default;
+
+function submit() {
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+
+  axios.post('http://localhost:3100/auth/login', {
+    email: email,
+    password: password
+  })
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+}
+
 export function Login() {
     return (
       <section className="vh-100" style={{backgroundColor: "#CCFACA"}}>
@@ -32,7 +50,8 @@ export function Login() {
     
                     <button
                       className="form-control form-control-lg btn  btn-outline-secondary btn-lg btn-block"
-                      type="submit"
+                      type="button"
+                      onClick={() =>submit()}
                     >
                       Login
                     </button>
