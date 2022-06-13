@@ -1,3 +1,5 @@
+import { Nav } from "react-bootstrap";
+
 export function ResetPassword() {
     return (
       <section className="vh-100" style={{backgroundColor: "#CCFACA"}}>
@@ -10,6 +12,7 @@ export function ResetPassword() {
                 <div className="card-body p-5 text-center">
                   <h3 className="mb-5 ">Reset Password</h3>
   
+                  <section className="mb-5">
                   <div className="form-outline mb-4">
                     <input
                       type="email"
@@ -43,6 +46,13 @@ export function ResetPassword() {
                   >
                     Reset Password
                   </button>
+                  </section>
+
+                  <hr />
+                  <section>
+                    <Nav.Link href="/login">Login</Nav.Link>
+                    <Nav.Link href="/register">Register</Nav.Link>
+                  </section>
                 </div>
               </div>
             </div>

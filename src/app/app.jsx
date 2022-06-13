@@ -6,7 +6,7 @@ export function App(){
             <div className="bg-dark" style={{paddingBottom : "3%"}}>
                 <Navbar variant="dark" sticky="top" expand="sm" collapseOnSelect className="d-flex justify-content-between align-items-center">
                     <Navbar.Brand>
-                      <img src="/hw-logo.svg" width="40px" height="40px" alt="" />
+                      <img src="/hw-logo.svg" width="60px" height="60px" alt="from devs to devs" />
                     </Navbar.Brand>
                     <Navbar.Toggle className="coloring" />
                     <Navbar.Collapse>
@@ -15,7 +15,9 @@ export function App(){
                             <Nav.Link href="/profile">Profile</Nav.Link>
                             <Nav.Link href="/stadistics">Stadistics</Nav.Link>
                         </Nav>
-                        <Button variant="outline-success" >Login</Button>
+                        <Button variant="outline-success" href="/Login">
+                            Login
+                        </Button>
                         
                     </Navbar.Collapse>
                 </Navbar>
@@ -31,7 +33,7 @@ export function App(){
             </div>
 
             <footer>
-                <section>
+                <section className="container">
                     <h1>Soy el footer</h1>
                 </section>
              </footer>

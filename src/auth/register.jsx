@@ -1,3 +1,5 @@
+import { Nav } from "react-bootstrap";
+
 export function Register() {
     return (
       <section className="vh-100" style={{backgroundColor: "#CCFACA"}}>
@@ -10,6 +12,7 @@ export function Register() {
                 <div className="card-body p-5 text-center">
                   <h3 className="mb-5 ">Register</h3>
   
+                  <section className="mb-5">
                   <div className="form-outline mb-4">
                     <input
                       type="text"
@@ -43,6 +46,13 @@ export function Register() {
                   >
                     Sign In
                   </button>
+                  </section>
+
+                  <hr />
+                  <section>
+                    <Nav.Link href="/login">Login</Nav.Link>
+                    <Nav.Link href="/resetPassword">Reset password</Nav.Link>
+                  </section>
                 </div>
               </div>
             </div>
