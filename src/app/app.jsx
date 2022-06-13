@@ -3,10 +3,10 @@ import { Nav, Navbar, Button, Form } from "react-bootstrap";
 export function App(){
     return (
         <div className="App">
-            <div className="bg-dark" >
-                <Navbar variant="dark" sticky="top" expand="sm" collapseOnSelect>
+            <div className="bg-dark" style={{paddingBottom : "3%"}}>
+                <Navbar variant="dark" sticky="top" expand="sm" collapseOnSelect className="d-flex justify-content-between align-items-center">
                     <Navbar.Brand>
-                      <img src="" width="40px" height="40px" alt="" />
+                      <img src="/hw-logo.svg" width="40px" height="40px" alt="" />
                     </Navbar.Brand>
                     <Navbar.Toggle className="coloring" />
                     <Navbar.Collapse>
@@ -15,14 +15,13 @@ export function App(){
                             <Nav.Link href="/profile">Profile</Nav.Link>
                             <Nav.Link href="/stadistics">Stadistics</Nav.Link>
                         </Nav>
-                        <Button variant="outline-success">Login</Button>
+                        <Button variant="outline-success" >Login</Button>
+                        
                     </Navbar.Collapse>
                 </Navbar>
-                <div className="container">
+                <div className="container" style={{marginTop : "2%"}}>
                     <Form>
-                        <Form.Group>
-                            <Form.Control type="text" placeholder="Search for jobs.." />
-                        </Form.Group>
+                        <Form.Control type="text" placeholder="Search for jobs.." />
                     </Form>
                 </div>
             </div>
