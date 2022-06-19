@@ -1,4 +1,27 @@
 import { Nav } from "react-bootstrap";
+const axios = require('axios').default;
+
+function submit() {
+  const username = document.getElementById('username').value;
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+
+  const token = "$2b$10$vyWUBnIw88o61c0GvXnaEeyjLjztHutiacsy6LFdvSqlQfL/GvJjW";
+  const config = {
+    headers: { Authorization: `Bearer ${token}` }
+  };
+  axios.post('http://localhost:3100/user', {
+    name: username,
+    email: email,
+    password: password
+  }, config)
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+}
 
 export function Register() {
     return (
@@ -43,15 +66,15 @@ export function Register() {
                   <button
                     className="form-control form-control-lg btn  btn-outline-secondary btn-lg btn-block"
                     type="submit"
+                    onClick={() => submit()}
                   >
-                    Sign In
+                    Register
                   </button>
                   </section>
 
                   <hr />
                   <section>
                     <Nav.Link href="/login">Login</Nav.Link>
-                    <Nav.Link href="/resetPassword">Reset password</Nav.Link>
                   </section>
                 </div>
               </div>

@@ -1,4 +1,27 @@
 import { Nav } from "react-bootstrap";
+const axios = require('axios').default;
+
+function submit() {
+  alert('aqui');
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+
+  const token = "$2b$10$vyWUBnIw88o61c0GvXnaEeyjLjztHutiacsy6LFdvSqlQfL/GvJjW";
+  const id = 32;
+  const config = {
+    headers: { Authorization: `Bearer ${token}` }
+  };
+  axios.put(`http://localhost:3100/user/updatepassword/${id}`, {
+    email: email,
+    password: password
+  }, config)
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+}
 
 export function ResetPassword() {
     return (
@@ -43,15 +66,10 @@ export function ResetPassword() {
                   <button
                     className="form-control form-control-lg btn  btn-outline-secondary btn-lg btn-block"
                     type="submit"
+                    onClick={() => submit()}
                   >
                     Reset Password
                   </button>
-                  </section>
-
-                  <hr />
-                  <section>
-                    <Nav.Link href="/login">Login</Nav.Link>
-                    <Nav.Link href="/register">Register</Nav.Link>
                   </section>
                 </div>
               </div>

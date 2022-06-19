@@ -60,7 +60,6 @@ export function Login() {
                   <hr />
                   <section>
                     <Nav.Link href="/register">Register</Nav.Link>
-                    <Nav.Link href="/resetPassword">Reset password</Nav.Link>
                   </section>
                 </div>
               </div>
