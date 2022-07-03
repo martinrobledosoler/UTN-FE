@@ -1,17 +1,19 @@
 import { Container } from "react-bootstrap";
+import { Footer } from "./footer";
+import { Header } from "./header";
 
 export function Home() {
   return (
-    <section>
+    <section className="container">
       <div className="d-flex flex-row-reverse mt-4  ">
         <img
           src="/homeDos.webp"
           width="400px"
           height="300px"
-          className="d-flex flex-row rounded-circle"
+          className="d-flex flex-row rounded-circle my-3 "
         />
         <p
-          className="p-2 text-center mx-3 p-5"
+          className="p-2 text-center mx-3 p-5 "
           style={{ fontSize: "20px", fontFamily: "serif" }}
         >
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione in
