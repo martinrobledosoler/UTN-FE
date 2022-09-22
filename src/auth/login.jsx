@@ -11,9 +11,12 @@ function submit() {
       password: password,
     })
     .then(function (response) {
-      console.log(response);
+      const token = response.data.access_token;
+      sessionStorage.setItem("token", token);
+      window.location.href = "http://localhost:3000/";
     })
     .catch(function (error) {
+      alert("Please check your email, the user is not activated");
       console.log(error);
     });
 }

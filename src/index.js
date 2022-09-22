@@ -6,10 +6,7 @@ import { Register } from "./auth/register";
 import { ResetPassword } from "./auth/resetPassword";
 import { ForgotYourPassword } from "./auth/forgotPassword";
 import { ValidateUser } from "./auth/validateUser";
-
-//import 'bootstrap/dist/css/bootstrap.css';
 import "bootstrap/dist/css/bootstrap.min.css";
-import { App } from "./app/app";
 import { Home } from "./app/home";
 import { Stadistics } from "./app/stadistics";
 import { Profile } from "./app/profile";
@@ -25,11 +22,10 @@ root.render(
       <Route path="/forgotPassword" element={<ForgotYourPassword />} />
       <Route path="/validateUser" element={<ValidateUser />} />
 
-      <Route path="/home" element={<Home />} />
+      <Route path="/" element={<Home />} />
       <Route path="/stadistics" element={<Stadistics />} />
       <Route path="/profile" element={<Profile />} />
       <Route path="/jobs" element={<Jobs />} />
-      <Route path="/" element={<App />} />
     </Routes>
   </BrowserRouter>
 );

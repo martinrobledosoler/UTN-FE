@@ -1,12 +1,12 @@
 export function Footer() {
   return (
-    <footer>
-      <div
-        className="container-fluid mt-5"
-        style={{ backgroundColor: "#1C2842" }}
-      >
+    <footer
+      className="container-fluid mt-5 "
+      style={{ backgroundColor: "#1C2842" }}
+    >
+      <div className="">
         <div className="row text-light p-5 ">
-          <div className="col-xs-12 col-md-9 col-lg-2">
+          <div className="col-12 col-md-9 col-lg-2  col-sm-4 text-center">
             <img
               src="/hw-logowhiteDos.png"
               width="150xpx"
@@ -25,27 +25,32 @@ export function Footer() {
             </a>
           </div>
 
-          <div className="col-xs-12 col-md-6 col-lg-8">
+          <div className="col-xs-12 col-md-6 col-lg-8 col-sm-4 d-none d-md-block ">
             <p className="h5 mb-3 text-center">About Us?</p>
             <div className="mb-2">
               <p
                 className="text-secondary text-decoration-none mx-5 text-center "
                 style={{ fontSize: "22px", fontFamily: "serif" }}
               >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
-                facilis nesciunt facere libero vitae optio adipisci aperiam
-                placeat fuga. Maiores quasi saepe excepturi aut culpa est in
-                magnam voluptatibus asperiores!
+                Martin Robledo Soler and Gabriel Barragán Cativa, are two
+                developers passionate about technology, who are looking for
+                constant to be at the forefront of the latest technological
+                advances in order to apply the best knowledge when developing
+                computer systems and development tools for the computer world.
               </p>
             </div>
           </div>
 
-          <div className="  col-12 col-md-6 col-lg-2 ">
-            <p className="h5 mb-3 container d-flex justify-content-end">
+          <div className="  col-12 col-md-6 col-lg-2">
+            <p className="h5 mb-3 container d-flex justify-content-end d-none d-md-flex ">
               Contact
             </p>
             <div className="mb-2 container ">
-              <a className="text-secondary text-decoration-none " href="#">
+              <a
+                className="text-secondary text-decoration-none "
+                href="https://www.google.com/intl/es-419/gmail/about/"
+                target="_blank"
+              >
                 <img
                   src="/logotipo-de-gmail.png"
                   width="20px"
@@ -56,7 +61,11 @@ export function Footer() {
               </a>
             </div>
             <div className="mb-2 container">
-              <a className="text-secondary text-decoration-none" href="#">
+              <a
+                className="text-secondary text-decoration-none"
+                href="https://www.facebook.com/"
+                target="_blank"
+              >
                 <img
                   src="/facebook1.png"
                   width="20px"
@@ -67,7 +76,11 @@ export function Footer() {
               </a>
             </div>
             <div className="mb-2 container ">
-              <a className="text-secondary text-decoration-none" href="#">
+              <a
+                className="text-secondary text-decoration-none"
+                href="https://twitter.com/?lang=es"
+                target="_blank"
+              >
                 <img
                   src="/gorjeo1.png"
                   width="20px"
@@ -78,7 +91,11 @@ export function Footer() {
               </a>
             </div>
             <div className="mb-2 container ">
-              <a className="text-secondary text-decoration-none" href="#">
+              <a
+                className="text-secondary text-decoration-none"
+                href="https://github.com/"
+                target="_blank"
+              >
                 <img
                   src="/github.png"
                   width="20px"

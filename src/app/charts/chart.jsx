@@ -5,7 +5,6 @@ import { useState } from "react";
 const axios = require("axios").default;
 
 export function BarChart() {
-  //============================Aqui se conecta a la Api=====================================================
   const [nombre, setNombre] = useState([]);
   const [cantidad, setCantidad] = useState([]);
 
@@ -13,7 +12,6 @@ export function BarChart() {
     const obetnerElementos = async () => {
       const be = "http://localhost:3100/job/stadistics";
       const resultado = await axios.get(be);
-      //console.log(resultado.data.data.leaderboard);
 
       var respuesta = resultado.data.data.leaderboard;
       var auxNombre = [],
@@ -27,8 +25,6 @@ export function BarChart() {
     };
     obetnerElementos();
   }, []);
-
-  //=============================Estas son las const donde se arma la grafica=====================================================
 
   const data = [
     { name: nombre[0], vacancies: cantidad[0] },

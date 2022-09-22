@@ -1,7 +1,7 @@
 import { Header } from "./header";
 import { Footer } from "./footer";
-import { BarChart } from "./chart";
-import { ChartTres } from "./chartTres";
+import { BarChart } from "./charts/chart";
+import { ChartTwo } from "./charts/chartTwo";
 
 export function Stadistics() {
   return (
@@ -9,8 +9,10 @@ export function Stadistics() {
       <section className="Header">
         <Header />
       </section>
-      <div className="container my-3 col-lg-8 shadow-lg">
-        <h3>TOP FIVE BEST COMPANIES WHITH MORE JOBS AVILABLE</h3>
+      <div className="container my-5 col-lg-8 shadow-lg">
+        <h3 className="text-center my-3">
+          TOP FIVE BEST COMPANIES WHITH MORE JOBS AVILABLE
+        </h3>
         <br />
         <BarChart />
         <hr />
@@ -23,9 +25,11 @@ export function Stadistics() {
       <br />
       <br />
       <div className="container my-3 col-lg-8 border shadow-lg">
-        <h3>CURRENT SALARY DISTRIBUTION FOR DEVELOPERS</h3>
+        <h3 className="text-center">
+          CURRENT SALARY DISTRIBUTION FOR DEVELOPERS
+        </h3>
         <br />
-        <ChartTres />
+        <ChartTwo />
         <hr />
         <h5>
           In this graph we can see the average salary offered by companies to

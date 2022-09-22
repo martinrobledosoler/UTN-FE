@@ -1,18 +1,16 @@
 const axios = require("axios").default;
 
 function submit() {
-  alert("aqui");
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
 
   const token = "$2b$10$vyWUBnIw88o61c0GvXnaEeyjLjztHutiacsy6LFdvSqlQfL/GvJjW";
-  const id = 32;
   const config = {
     headers: { Authorization: `Bearer ${token}` },
   };
   axios
-    .put(
-      `http://localhost:3100/user/updatepassword/${id}`,
+    .post(
+      `http://localhost:3100/user/updatepassword`,
       {
         email: email,
         password: password,
@@ -20,7 +18,7 @@ function submit() {
       config
     )
     .then(function (response) {
-      console.log(response);
+      window.location.href = "http://localhost:3000/login";
     })
     .catch(function (error) {
       console.log(error);
